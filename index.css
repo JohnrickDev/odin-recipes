@@ -1,5 +1,5 @@
 html {
-  font-size: 62.5%; /* sets the root font-size to 10px*/
+  font-size: 62.5%; /* sets the root font-size to 10px */
   box-sizing: border-box;
 }
 
@@ -10,32 +10,47 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  line-height: 1.4;
 }
+
 h1,
 .recipes-link,
 .outro,
 .intro {
-  font-size: 2rem;
-  margin: 4rem auto;
+  font-size: 2rem; /* 20px */
+  margin: 4rem auto; /* 40px auto */
 }
 
 h1 {
   font-size: 4rem; /* 40px */
   background-color: blanchedalmond;
   max-width: 50rem; /* 500px */
-  border: 3px solid #953118;
-  padding: 1rem;
+  border: 0.3rem solid #953118; /* 3px */
+  padding: 1rem; /* 10px */
+  margin: 7rem auto; /* 70px auto */
+  text-align: center; /* Center text within h1 */
 }
 
+@media (max-width: 700px) {
+  h1 {
+    margin: 7rem auto; /* 70px auto */
+    max-width: 70%; /* Adjust max-width for smaller screens */
+  }
+}d
+
+
 .intro {
-  max-width: 59rem; /* 650px */
+  max-width: 60rem; /* 600px */
+  margin-top: 7.5rem; /* 75px */
 }
 
 .recipes-link a {
   color: black;
   text-decoration: none;
+  font-size: 2.2rem; /* 22px */
 }
 
 .outro {
-    margin-top: 7rem;
+  margin-top: 7rem; /* 70px */
+  font-size: 2.2rem; /* 22px */
 }
