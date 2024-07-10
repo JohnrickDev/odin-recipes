@@ -1,56 +1,177 @@
+/* Base styling for html and body */
 html {
-  font-size: 62.5%; /* sets the root font-size to 10px */
+  font-size: 62.5%; /* 1rem = 10px */
   box-sizing: border-box;
 }
 
 body {
-  box-sizing: inherit;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  text-align: center;
+  line-height: 1.4;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.4;
+  background-color: #f4f4f4; /* Light background for better contrast */
+  text-align: center; /* Center alignment for general content */
 }
 
-h1,
-.recipes-link,
-.outro,
-.intro {
-  font-size: 2rem; /* 20px */
-  margin: 4rem auto; /* 40px auto */
+/* Styling for header */
+header {
+  width: calc(100% - 2rem); /* Full width minus margin */
+  margin: 0 auto; /* Center the header */
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
-h1 {
-  font-size: 4rem; /* 40px */
+header h1 {
+  text-align: center;
+  font-size: 4rem;
   background-color: blanchedalmond;
-  max-width: 50rem; /* 500px */
-  border: 0.3rem solid #953118; /* 3px */
-  padding: 1rem; /* 10px */
-  margin: 7rem auto; /* 70px auto */
-  text-align: center; /* Center text within h1 */
+  border: 0.3rem solid #953118;
+  margin: 4.5rem 0; /* Margin top and bottom */
+  padding: 1rem;
+  border-radius: 0.5rem; /* Rounded corners for a softer look */
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
-@media (max-width: 700px) {
-  h1 {
-    margin: 7rem auto; /* 70px auto */
-    max-width: 70%; /* Adjust max-width for smaller screens */
+/* Styling for h3 */
+h3.intro {
+  font-size: 2.4rem; /* Adjust font size for consistency */
+  margin: 2rem 0; /* Add margin for spacing */
+  color: #333; /* Ensure color consistency */
+}
+
+/* Image styling */
+.image-file {
+  text-align: center;
+  padding: 1rem;
+}
+
+.image-file img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* Common heading style */
+.heading {
+  font-size: 3rem;
+  color: #333; /* Slightly darker color for better readability */
+  margin-bottom: 1.5rem; /* Spacing below headings */
+  text-align: center; /* Center alignment for headings */
+}
+
+/* Section styling for content areas */
+.introduction,
+.ingredients,
+.instructions,
+.tips,
+.footer {
+  max-width: 70rem;
+  margin: 1.5rem auto; /* Center align the containers and add top/bottom margin */
+  padding: 1rem; /* Added padding for better spacing */
+  background-color: #fff; /* White background for sections */
+  border-radius: 0.5rem; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  text-align: left; /* Align text to the left for recipe sections */
+}
+
+/* Styling for text within sections */
+.introduction p,
+.ingredients ul,
+.instructions ol,
+.tips ul,
+.footer p {
+  font-size: 2rem;
+  color: #666; /* Slightly lighter color for less emphasis */
+}
+
+/* Styling for footer section */
+.footer {
+  padding: 2rem; /* Added padding for better spacing */
+  margin-bottom: 2rem; /* Ensure space between footer and bottom of the viewport */
+}
+
+/* Styling for individual footer elements */
+.outro,
+.back-to-homepage {
+  margin-bottom: 1.5rem; /* Added margin to the bottom of each section */
+}
+
+.outro {
+  margin-top: 1.5rem; /* Added margin to the top of the outro section */
+}
+
+/* Styling for links in footer */
+.back-to-homepage a {
+  color: #007bff; /* Adjust color as needed */
+  text-decoration: none;
+}
+
+.back-to-homepage a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  header {
+    width: calc(100% - 2rem); /* Full width minus margin */
+    margin: 0 auto; /* Center the header */
   }
-}d
 
+  header h1 {
+    margin: 4.5rem 0; /* Fixed margin for smaller screens */
+  }
 
-.intro {
-  max-width: 60rem; /* 600px */
-  margin-top: 7.5rem; /* 75px */
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .introduction,
+  .ingredients,
+  .instructions,
+  .tips,
+  .footer {
+    max-width: 90%; /* Increase max-width for better fit on smaller screens */
+    margin: 1.5rem auto; /* Reduce margin for smaller screens */
+    padding: 1rem; /* Maintain padding for consistent spacing */
+  }
+
+  .introduction p,
+  .ingredients ul,
+  .instructions ol,
+  .tips ul,
+  .footer p {
+    font-size: 1.8rem;
+  }
+
+  h3.intro {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Specific styles for recipe links */
+.recipes-link {
+  margin: 2rem auto; /* Center align and add margin */
+  font-size: 2rem; /* 20px */
+}
+
+.recipes-link p {
+  margin: 0.5rem 0; /* Add spacing between recipe links */
 }
 
 .recipes-link a {
   color: black;
   text-decoration: none;
-  font-size: 2.2rem; /* 22px */
 }
 
-.outro {
-  margin-top: 7rem; /* 70px */
+.recipes-link a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for outro text */
+p.outro {
   font-size: 2.2rem; /* 22px */
+  margin: 7rem auto; /* Center align and add margin */
+  max-width: 70rem; /* Limit width to keep text readable */
 }
